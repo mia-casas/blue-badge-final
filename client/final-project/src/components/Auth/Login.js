@@ -5,8 +5,17 @@ const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    let emailSyntax = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     let handleSubmit = (event) => {
         event.preventDefault();
+        if(emailSyntax.test(email)!== true){
+            alert("Valid e-mail address required!")
+        } 
+        if(password.length < 5 || password.length >16){
+            alert("Please enter a password between 5 and 16 characters")
+
+        } else 
         fetch(`http://localhost:5005/user/login`, {
             method: "POST",
             body: JSON.stringify({user:{email: email, password: password}}),
@@ -17,6 +26,7 @@ const Login = (props) => {
             (response) => response.json()
         ).then((data) => {
             props.updateToken(data.sessionToken)
+            alert("Login Success!") //TEST ONLY
         })
     }
     return(
@@ -24,11 +34,11 @@ const Login = (props) => {
             <h1>Login</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">Login with Email<br /></Label>
                     <Input onChange={(e) => setEmail(e.target.value)} name="email" value={email}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="password">Password</Label>
+                    <Label htmlFor="password">Password<br /></Label>
                     <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password} type="password"/>
                 </FormGroup>
                 <Button type='submit'>Login</Button>
