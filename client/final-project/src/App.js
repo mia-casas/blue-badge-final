@@ -6,9 +6,7 @@ import RecipeCarousel from './components/carousel.component';
 import HomePage from './components/Home/Home';
 
 // Import content sections
-import Auth from './components/Auth/Auth';
 import HeaderNav from './components/site/HeaderNav';
-import Carousel from './components/site/Carousel';
 import SavedRecipies from './components/site/SavedRecipies'
 import Footer from './components/site/Footer';
 

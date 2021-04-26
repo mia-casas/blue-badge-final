@@ -1,4 +1,5 @@
 import React from 'react';
+import PageNav from './Nav'
 
 const HomePage = (props) => {
     return(
