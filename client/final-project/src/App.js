@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import Auth from './components/Auth/Auth'
+import RecipeCarousel from './components/carousel.component';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="App">
           <Auth updateToken={updateToken}/>
+          <RecipeCarousel/>
     </div>
   );
 }
