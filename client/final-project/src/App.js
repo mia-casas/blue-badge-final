@@ -9,6 +9,7 @@ import HomePage from './components/Home/Home';
 import HeaderNav from './components/site/HeaderNav';
 import SavedRecipes from './components/site/SavedRecipes'
 import Footer from './components/site/Footer';
+import RecipeSearch from './components/site/RecipeSearch';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -35,6 +36,7 @@ function App() {
         <HeaderNav />
         <SavedRecipes />
         {protectedViews()}
+        <RecipeSearch />
         <RecipeCarousel/>
         <Footer /> 
   

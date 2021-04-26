@@ -10,7 +10,7 @@ import {
         return(
             <header>
                 <Navbar className='header'>
-                    <NavbarBrand href='/'>VERDE LIST</NavbarBrand>
+                    <NavbarBrand href='/'>Lista</NavbarBrand>
                     <Nav className='ml-auto' navbar>
                         <NavItem>
                             <NavLink href='https://github.com/mia-casas/blue-badge-final-client'>

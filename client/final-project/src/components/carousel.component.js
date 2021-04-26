@@ -11,7 +11,7 @@ export default function RecipeCarousel() {
 
     return (
 
-        <div class="carousel-wrapper">
+        <div className="carousel-wrapper">
 
             <Carousel>
 
