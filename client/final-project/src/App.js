@@ -1,12 +1,18 @@
-import './App.css';
 import React, {useState, useEffect} from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 import Auth from './components/Auth/Auth'
 import RecipeCarousel from './components/carousel.component';
 import HomePage from './components/Home/Home';
 
+// Import content sections
+import Auth from './components/Auth/Auth';
+import HeaderNav from './components/site/HeaderNav';
+import Carousel from './components/site/Carousel';
+import SavedRecipies from './components/site/SavedRecipies'
+import Footer from './components/site/Footer';
 
 function App() {
-
   const [sessionToken, setSessionToken] = useState('');
 
   useEffect(() => {
@@ -26,11 +32,13 @@ function App() {
   }
 
   return (
+
     <div className="App">
-          
-          {protectedViews()}
-          
-          <RecipeCarousel/>
+        <HeaderNav />
+        <SavedRecipies />
+        {protectedViews()}
+        <RecipeCarousel/>
+        <Footer /> 
   
     </div>
   );
