@@ -2,6 +2,8 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import Auth from './components/Auth/Auth'
 import RecipeCarousel from './components/carousel.component';
+import HomePage from './components/Home/Home';
+
 
 function App() {
 
@@ -18,10 +20,17 @@ function App() {
     setSessionToken(newToken);
   }
 
+  const protectedViews = () => {
+    return (sessionToken ===localStorage.getItem('token') ? <HomePage token={sessionToken}/>
+    : <Auth updateToken={updateToken}/>)
+  }
+
   return (
     <div className="App">
           <Auth updateToken={updateToken}/>
           <RecipeCarousel/>
+          {protectedViews()}
+  
     </div>
   );
 }
