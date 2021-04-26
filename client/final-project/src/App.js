@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import Auth from './components/Auth/Auth'
+import RecipeCarousel from './components/carousel.component';
+import HomePage from './components/Home/Home';
 
 // Import content sections
 import Auth from './components/Auth/Auth';
@@ -23,14 +26,21 @@ function App() {
     setSessionToken(newToken);
   }
 
+  const protectedViews = () => {
+    return (sessionToken ===localStorage.getItem('token') ? <HomePage token={sessionToken}/>
+    : <Auth updateToken={updateToken}/>)
+  }
+
   return (
-<div>
+
+    <div className="App">
         <HeaderNav />
-        <Auth updateToken={updateToken}/>
-        <Carousel />
         <SavedRecipies />
-        <Footer />
-</div>
+        {protectedViews()}
+        <RecipeCarousel/>
+        <Footer /> 
+  
+    </div>
   );
 }
 
