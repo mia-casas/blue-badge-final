@@ -39,15 +39,19 @@ function App() {
           <Col>
           {protectedViews()}
           </Col>
-            <Col>
+            <Col xs="4">
+              <br/>
             <RecipeCarousel/>
+            <br/>
             <SavedRecipes />
             </Col>
           </Row>
-       </Col>
        <br/>
-        <Footer /> 
-  
+       <br/>
+       <br/>
+       <br/>
+        <Footer />
+       </Col>
     </div>
   );
 }

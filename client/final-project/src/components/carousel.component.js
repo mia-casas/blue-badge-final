@@ -16,18 +16,18 @@ export default function RecipeCarousel() {
             <Carousel>
 
                 <div>
-                    <img src={item1}/>
-                    <h4>item 1</h4>
-                    <h1></h1>
+                    <img class="slides" src={item1}/>
+                    <h4>Item 1</h4>
+                    <h4 id ="disappear">.</h4>
                 </div>
 
                 <div>
-                <img src={item2}/>
+                <img class="slides" src={item2}/>
                 <h4>Item 2</h4>
                 </div>
 
                 <div>
-                <img src={item3}/>
+                <img class="slides" src={item3}/>
                 <h4>Item 3</h4>
                 </div>
 
