@@ -10,6 +10,8 @@ import HomePage from './components/Home/Home';
 import HeaderNav from './components/site/HeaderNav';
 import SavedRecipes from './components/site/SavedRecipes'
 import Footer from './components/site/Footer';
+import RecipeSearch from './components/site/RecipeSearch';
+require("dotenv").config();
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -24,7 +26,10 @@ function App() {
     localStorage.setItem('token', newToken);
     setSessionToken(newToken);
   }
-
+  const clearToken = () => {
+    localStorage.clear();
+    setSessionToken('');
+  }
   const protectedViews = () => {
     return (sessionToken ===localStorage.getItem('token') ? <HomePage token={sessionToken}/>
     : <Auth updateToken={updateToken}/>)
@@ -33,11 +38,14 @@ function App() {
   return (
 
     <div className="App">
+
+        <HeaderNav clickLogout={clearToken}/>
+  
        <Col>
-       <HeaderNav />
           <Row>
           <Col>
           {protectedViews()}
+          <RecipeSearch />
           </Col>
             <Col xs="4">
               <br/>
@@ -45,6 +53,7 @@ function App() {
             <br/>
             <Row>
               <SavedRecipes />
+           
             </Row>
             </Col>
           </Row>
@@ -52,6 +61,7 @@ function App() {
        <br/>
         <Footer />
        </Col>
+
     </div>
   );
 }
