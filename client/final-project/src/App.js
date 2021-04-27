@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { Col, Row } from 'reactstrap'
-require("dotenv").config();
 
 // Import content sections
 import Auth from './components/Auth/Auth'
@@ -12,6 +11,8 @@ import HeaderNav from './components/site/HeaderNav';
 import SavedRecipes from './components/site/SavedRecipes'
 import Footer from './components/site/Footer';
 import RecipeSearch from './components/site/RecipeSearch';
+
+require("dotenv").config();
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -50,6 +51,7 @@ function App() {
           <Row>
           <Col>
           {protectedViews()}
+          <RecipeSearch />
           </Col>
             <Col xs="4">
               <br/>
@@ -57,6 +59,7 @@ function App() {
             <br/>
             <Row>
               <SavedRecipes />
+           
             </Row>
             </Col>
           </Row>
