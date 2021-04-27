@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import { Col, Row } from 'reactstrap'
+
+// Import content sections
 import Auth from './components/Auth/Auth'
 import RecipeCarousel from './components/carousel.component';
 import HomePage from './components/Home/Home';
-
-// Import content sections
 import HeaderNav from './components/site/HeaderNav';
-import SavedRecipies from './components/site/SavedRecipies'
+import SavedRecipes from './components/site/SavedRecipes'
 import Footer from './components/site/Footer';
 
 function App() {
@@ -32,12 +33,25 @@ function App() {
   return (
 
     <div className="App">
-        <HeaderNav />
-        <SavedRecipies />
-        {protectedViews()}
-        <RecipeCarousel/>
-        <Footer /> 
-  
+       <Col>
+       <HeaderNav />
+          <Row>
+          <Col>
+          {protectedViews()}
+          </Col>
+            <Col xs="4">
+              <br/>
+            <RecipeCarousel/>
+            <br/>
+            <Row>
+              <SavedRecipes />
+            </Row>
+            </Col>
+          </Row>
+       <br/>
+       <br/>
+        <Footer />
+       </Col>
     </div>
   );
 }

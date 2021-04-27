@@ -40,7 +40,7 @@ const Signup = (props) => {
                     <Input type="email" onChange={(e) => setEmail(e.target.value)} name="email" value={email}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="password">Create Password (5-16 characters) <br/></Label>
+                    <Label htmlFor="password">New Password (5-16 characters) <br/></Label>
                     <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password} type="password"/>
                 </FormGroup>
                 <Button type='submit'>Sign Up</Button>
