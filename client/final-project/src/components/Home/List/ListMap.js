@@ -28,7 +28,7 @@ const ListMap = (props) => {
                         Edit
                     </DropdownToggle>
                     <DropdownMenu>
-                        <DropdownItem>Edit</DropdownItem>
+                        <DropdownItem onClick={() => {props.editUpdateList(list); props.updateOn()}}>Edit</DropdownItem>
                         <DropdownItem onClick={() => {deleteList(list)}}>Remove</DropdownItem>
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
