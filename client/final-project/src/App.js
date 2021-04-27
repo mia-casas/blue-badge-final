@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { Col, Row } from 'reactstrap'
+require("dotenv").config();
 
 // Import content sections
 import Auth from './components/Auth/Auth'
@@ -10,6 +11,7 @@ import HomePage from './components/Home/Home';
 import HeaderNav from './components/site/HeaderNav';
 import SavedRecipes from './components/site/SavedRecipes'
 import Footer from './components/site/Footer';
+import RecipeSearch from './components/site/RecipeSearch';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
