@@ -6,6 +6,7 @@ body {
   padding: 10px;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+  
 
 }
 
@@ -80,3 +81,13 @@ ul {
 .header  p {
   margin-top: 0.8em!important;
 }
+
+/* carousel*/
+#disappear{
+  color: rgba(240, 248, 255, 0);
+}
+
+.slides{
+  border-radius: 10px;
+}
+

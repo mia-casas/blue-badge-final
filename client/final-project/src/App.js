@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import { Col, Row } from 'reactstrap'
 
 // Import content sections
 import Auth from './components/Auth/Auth'
@@ -33,6 +34,7 @@ function App() {
   return (
 
     <div className="App">
+<<<<<<< HEAD
         <HeaderNav />
         <SavedRecipes />
         {protectedViews()}
@@ -40,6 +42,27 @@ function App() {
         <RecipeCarousel/>
         <Footer /> 
   
+=======
+       <Col>
+       <HeaderNav />
+          <Row>
+          <Col>
+          {protectedViews()}
+          </Col>
+            <Col xs="4">
+              <br/>
+            <RecipeCarousel/>
+            <br/>
+            <Row>
+              <SavedRecipes />
+            </Row>
+            </Col>
+          </Row>
+       <br/>
+       <br/>
+        <Footer />
+       </Col>
+>>>>>>> 438ace4badb08a22c132e2e9373c89b51512b3da
     </div>
   );
 }
