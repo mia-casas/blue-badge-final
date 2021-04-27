@@ -11,11 +11,15 @@ export default function RecipeCarousel() {
 
     return (
 
-        <div class="carousel-wrapper">
+        <div className="carousel-wrapper">
 
             <Carousel>
 
                 <div>
+
+                    <img src={item1}/>                                       
+                    <h2>Item 1</h2>
+
                     <img class="slides" alt="" src={item1}/>
                     <h4>Item 1</h4>
                     <h4 id ="disappear">.</h4>
