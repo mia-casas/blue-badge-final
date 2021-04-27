@@ -43,11 +43,11 @@ function App() {
               <br/>
             <RecipeCarousel/>
             <br/>
-            <SavedRecipes />
+            <Row>
+              <SavedRecipes />
+            </Row>
             </Col>
           </Row>
-       <br/>
-       <br/>
        <br/>
        <br/>
         <Footer />

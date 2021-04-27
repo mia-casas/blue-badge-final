@@ -4,9 +4,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 export default function RecipeCarousel() {
-    const [item1, setItem1] = useState(`https://www.edamam.com/web-img/1a7/1a7e8a7208e149b15e3d1ee51d77e7aa.jpg`)
-    const [item2, setItem2] = useState(`https://www.edamam.com/web-img/1a7/1a7e8a7208e149b15e3d1ee51d77e7aa.jpg`)
-    const [item3, setItem3] = useState(`https://www.edamam.com/web-img/1a7/1a7e8a7208e149b15e3d1ee51d77e7aa.jpg`)
+    const [item1] = useState(`https://www.edamam.com/web-img/1a7/1a7e8a7208e149b15e3d1ee51d77e7aa.jpg`)
+    const [item2] = useState(`https://www.edamam.com/web-img/1a7/1a7e8a7208e149b15e3d1ee51d77e7aa.jpg`)
+    const [item3] = useState(`https://www.edamam.com/web-img/1a7/1a7e8a7208e149b15e3d1ee51d77e7aa.jpg`)
 
 
     return (
@@ -16,18 +16,18 @@ export default function RecipeCarousel() {
             <Carousel>
 
                 <div>
-                    <img class="slides" src={item1}/>
+                    <img class="slides" alt="" src={item1}/>
                     <h4>Item 1</h4>
                     <h4 id ="disappear">.</h4>
                 </div>
 
                 <div>
-                <img class="slides" src={item2}/>
+                <img class="slides" alt="" src={item2}/>
                 <h4>Item 2</h4>
                 </div>
 
                 <div>
-                <img class="slides" src={item3}/>
+                <img class="slides" alt="" src={item3}/>
                 <h4>Item 3</h4>
                 </div>
 
