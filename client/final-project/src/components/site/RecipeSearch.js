@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Row } from "reactstrap";
+import { Col, Row,Form, FormGroup, Label, Input, Button } from "reactstrap";
 require("dotenv").config();
 
 const RecipeSearch = () => {
@@ -66,32 +66,32 @@ const onSubmitForm = (event) => {
         <h1>Lista Recipe Finder</h1>
          {/* SEARCH FORM */}
         <Col>
-        <form onSubmit={(e) => onSubmitForm(e)} >
-     
-          <label for="food">Main Food:</label>
-          <input
+        <Form onSubmit={onSubmitForm} >
+          <FormGroup>
+          <Label for="food">Main Food:</Label>
+          <Input
             type="text" name="food"
           />
   
-          <label for="diet">Diet Preference:</label>
-          <input
+          <Label for="diet">Diet Preference:</Label>
+          <Input
             type="text" name="diet"
           />
-       
-      
-          <label for="cuisineType">Cuisine Type:</label>
-          <input
+
+          <Label for="cuisineType">Cuisine Type:</Label>
+          <Input
             type="text" name="cuisineType"
             />
 
-          <label for="mealType">Meal Type:</label>
-          <input
+          <Label for="mealType">Meal Type:</Label>
+          <Input
             type="text"
            name="mealType"
           />
       
-        <button type="submit">Submit</button>
-             </form>
+        <Button type="submit">Submit</Button>
+        </FormGroup>
+             </Form>
         </Col>
       </div>
       <Row>

@@ -41,16 +41,14 @@ function App() {
     <div className="App">
 
         <HeaderNav clickLogout={clearToken}/>
-        <SavedRecipies />
         {protectedViews()}
-        <RecipeCarousel/>
-        <Footer /> 
+
   
        <Col>
-       <HeaderNav />
+     
           <Row>
           <Col>
-          {protectedViews()}
+         
           <RecipeSearch />
           </Col>
             <Col xs="4">
