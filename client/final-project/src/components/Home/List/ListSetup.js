@@ -60,6 +60,7 @@ const ListCreate =(props) => {
                                 <FormGroup>
                                     <Label htmlFor='category'></Label>
                                     <Input type='select' placeholder="Select a Category" name='Category' value={category} onChange={(e) =>setCategory(e.target.value)}>
+                                        <option>Select One</option>
                                         <option value="Produce">Produce</option>
                                         <option value="Dairy">Dairy</option>
                                         <option value="Meat & Seafood">Meat & Seafood</option>
