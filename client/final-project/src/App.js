@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import { Col, Row } from 'reactstrap'
 
 // Import content sections
 import Auth from './components/Auth/Auth'
@@ -32,10 +33,19 @@ function App() {
   return (
 
     <div className="App">
-        <HeaderNav />
-        <SavedRecipes />
-        {protectedViews()}
-        <RecipeCarousel/>
+       <Col>
+       <HeaderNav />
+          <Row>
+          <Col>
+          {protectedViews()}
+          </Col>
+            <Col>
+            <RecipeCarousel/>
+            <SavedRecipes />
+            </Col>
+          </Row>
+       </Col>
+       <br/>
         <Footer /> 
   
     </div>
