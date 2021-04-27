@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { Col, Row } from 'reactstrap'
+
 // Import content sections
 import Auth from './components/Auth/Auth'
 import RecipeCarousel from './components/carousel.component';
@@ -44,6 +45,7 @@ function App() {
           <Row>
           <Col>
           {protectedViews()}
+          <RecipeSearch />
           </Col>
             <Col xs="4">
               <br/>
@@ -51,6 +53,7 @@ function App() {
             <br/>
             <Row>
               <SavedRecipes />
+           
             </Row>
             </Col>
           </Row>
