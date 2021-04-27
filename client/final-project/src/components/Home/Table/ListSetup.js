@@ -21,14 +21,15 @@ const ListCreate =(props) => {
             setItem('');
             setQuantity('');
             setCategory('');
-            props.fetchList();
+            props.fetchLists();
+            console.log(listData)
         })
     }
 
     return(
         <Container>
-            <h2>My List</h2>
-            <Table borderless size="sm" hover>
+            <h2>Add New Item</h2>
+            <Table borderless size="sm" >
                 <thead>
                     <tr>
                     <th>Item</th>
@@ -55,7 +56,7 @@ const ListCreate =(props) => {
                             </Form>
                         </th>
                         <th>
-                            <Form onSubmit={handleSubmit}>
+                            <Form>
                                 <FormGroup>
                                     <Label htmlFor='category'></Label>
                                     <Input type='select' name='Category' value={category} onChange={(e) =>setCategory(e.target.value)}>
@@ -70,7 +71,7 @@ const ListCreate =(props) => {
                             </Form>
                         </th>
                         <th>
-                            <Button type="submit">Add</Button>
+                            <Button type="submit" onClick={handleSubmit} color="success">Add</Button>
                         </th>
                     </tr>
                 </tbody>
