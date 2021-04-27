@@ -23,7 +23,10 @@ function App() {
     localStorage.setItem('token', newToken);
     setSessionToken(newToken);
   }
-
+  const clearToken = () => {
+    localStorage.clear();
+    setSessionToken('');
+  }
   const protectedViews = () => {
     return (sessionToken ===localStorage.getItem('token') ? <HomePage token={sessionToken}/>
     : <Auth updateToken={updateToken}/>)
@@ -32,7 +35,7 @@ function App() {
   return (
 
     <div className="App">
-        <HeaderNav />
+        <HeaderNav clickLogout={clearToken}/>
         <SavedRecipies />
         {protectedViews()}
         <RecipeCarousel/>

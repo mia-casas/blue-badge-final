@@ -11,7 +11,7 @@ export default function RecipeCarousel() {
 
     return (
 
-        <div class="carousel-wrapper">
+        <div className="carousel-wrapper">
 
             <Carousel>
 
@@ -19,7 +19,7 @@ export default function RecipeCarousel() {
                     <img src={item1}/>                                       
                     <h2>Item 1</h2>
                 </div>
-                
+
                 <div>
                 <img src={item2}/>
                 <h2>Item 2</h2>
