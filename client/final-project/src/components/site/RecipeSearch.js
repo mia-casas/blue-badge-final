@@ -1,7 +1,6 @@
-// TESTING API Calls and variables 
 import React, {useState} from "react";
 import { Col, Row, Button } from 'reactstrap';
-require("dotenv").config();
+
 
 const RecipeSearch = () => {
    const [recipe1, displayRecipes1] = useState([])
@@ -15,12 +14,9 @@ const RecipeSearch = () => {
 
 // Construct fetchURL (NEED TO FIGURE OUT WHY ENV ISN'T WORKING)
   let baseURL = "https://api.edamam.com/";
-  let appID = `cbecaae1`;
-  let appKey = `cef02729bb7c43f5132aeb83f4e22d49`;
    
-
 // This is for testing (NEED TO CREATE SEARCH)
-  let url = `${baseURL}search?q=quinoa&health=vegetarian&cuisineType=Indian&mealType=dinner&app_id=${appID}&app_key=${appKey}`
+  let url = `${baseURL}search?q=quinoa&health=vegetarian&cuisineType=Indian&mealType=dinner&app_id=${process.env.APPID}&app_key=${process.env.APPKEY}`
 
  
 const getRecipe =()=>{
