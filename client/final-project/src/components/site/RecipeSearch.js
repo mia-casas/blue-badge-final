@@ -10,8 +10,6 @@ const RecipeSearch = () => {
   const [title2, displayTitle2] = useState([]);
   const [title3, displayTitle3] = useState([]);
 
-  //RECIPE IMAGES????
-
   const [search, setSearch] = useState({
     food: "",
     diet: "",
@@ -19,6 +17,7 @@ const RecipeSearch = () => {
     mealType: "",
   });
 
+// Form Submit Fetch  
 const onSubmitForm = (event) => {
   event.preventDefault();
   const { food, diet, cuisineType, mealType } = event.target;
@@ -29,15 +28,15 @@ const onSubmitForm = (event) => {
   mealType: mealType.value,
   });
 
-  // Set Base API URL and Keys
+// Set Base API URL and Keys
   let baseURL = "https://api.edamam.com/";
   let appId = "cbecaae1";
   let appKey = "cef02729bb7c43f5132aeb83f4e22d49";
 
-  // Create Search URL variable
+// Create Search URL variable
   let url = `${baseURL}search?q=${food.value}&health=${diet.value}&cuisineType=${cuisineType.value}&mealType=${mealType.value}&app_id=${appId}&app_key=${appKey}`;
 
-  // Insert Mean Girls Joke about making fetch happen
+// FETCH 
       fetch(url)
         .then((res) => res.json())
         .then((props) => {
@@ -50,16 +49,20 @@ const onSubmitForm = (event) => {
           // Recipe 3
           displayRecipes3(props.hits[4].recipe.ingredientLines);
           displayTitle3(props.hits[4].recipe.label);
-        });
+        })
+        .catch(function (err) {
+          console.error(err);
+        });  
     };
 
-  //Convert recipe arrays into list items
+//Convert recipe arrays into list items
 
   const recipeList1 = recipe1.map((recipe1) => <li>{recipe1}</li>);
   const recipeList2 = recipe2.map((recipe2) => <li>{recipe2}</li>);
   const recipeList3 = recipe3.map((recipe3) => <li>{recipe3}</li>);
 
-  //Return
+// ***** RETURN ********
+
   return (
     <div className="main">
       <div className="mainDiv">
@@ -88,8 +91,7 @@ const onSubmitForm = (event) => {
             type="text"
            name="mealType"
           />
-      
-        <Button type="submit">Submit</Button>
+       <Button type="submit">Submit</Button>
         </FormGroup>
              </Form>
         </Col>
