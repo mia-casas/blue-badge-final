@@ -12,9 +12,11 @@ body {
 
 /* footer */
 footer {
-  background-color: #899c0f; 
+  background-color: #BAC600; 
   color: white;
   margin-top: 10px;
+  position: absolute;
+  width: 100%;
 }
 
 footer  p {
@@ -38,7 +40,7 @@ footer  p {
 
 .sidebar {
   display: flex;
-  background-color: #899c0f; 
+  background-color: #BAC600; 
   margin-top: 10px;
 }
 
@@ -51,7 +53,7 @@ ul {
   padding-left: 50px;
   padding-top: 15px;
   width: 20%;
-  background-color: #899c0f;
+  background-color: #6aaf39;
   color: white;
 }
 
@@ -69,9 +71,10 @@ ul {
 .header {
   margin-top: 0.5em !important;
   text-align: center;
-  background-color: #899c0f; 
+  background-color: #BAC600; 
   font-family: 'Orelega One', cursive;
   color: white;
+  height: 15em;
 }
 
 .header a {
@@ -82,6 +85,12 @@ ul {
   margin-top: 0.8em!important;
 }
 
+#logo{
+  height: 14em;
+  border-radius: 50%;
+  border: 0.5px solid rgb(219, 214, 214)
+}
+
 /* carousel*/
 #disappear{
   color: rgba(240, 248, 255, 0);
@@ -90,4 +99,3 @@ ul {
 .slides{
   border-radius: 10px;
 }
-
