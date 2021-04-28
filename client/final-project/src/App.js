@@ -44,6 +44,7 @@ function App() {
           <Row>
           <Col>
           {protectedViews()}
+          <RecipeSearch />
           </Col>
             <Col xs="4">
               <br/>
@@ -53,12 +54,11 @@ function App() {
               <SavedRecipes />
             </Row>
             </Col>
-          </Row>
+          </Row>     
        <br/>
        <br/>
-        <Footer />
-       </Col>
-
+      </Col>
+      <Footer />
     </div>
   );
 }

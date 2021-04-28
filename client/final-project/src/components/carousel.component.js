@@ -17,21 +17,21 @@ export default function RecipeCarousel() {
 
                 <div>
 
-                    <img src={item1}/>                                       
+                    <img src={item1}/>
                     <h2>Item 1</h2>
 
-                    <img class="slides" alt="" src={item1}/>
+                    <img className="slides" alt="" src={item1}/>
                     <h4>Item 1</h4>
                     <h4 id ="disappear">.</h4>
                 </div>
 
                 <div>
-                <img class="slides" alt="" src={item2}/>
+                <img className="slides" alt="" src={item2}/>
                 <h4>Item 2</h4>
                 </div>
 
                 <div>
-                <img class="slides" alt="" src={item3}/>
+                <img className="slides" alt="" src={item3}/>
                 <h4>Item 3</h4>
                 </div>
 
@@ -40,5 +40,5 @@ export default function RecipeCarousel() {
         </div>
 
     );
-    
+
 }
