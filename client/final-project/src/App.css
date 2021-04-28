@@ -12,7 +12,7 @@ body {
 
 /* footer */
 footer {
-  background-color: #6aaf39; 
+  background-color: #BAC600; 
   color: white;
   margin-top: 10px;
   position: absolute;
@@ -40,7 +40,7 @@ footer  p {
 
 .sidebar {
   display: flex;
-  background-color: #6aaf39; 
+  background-color: #BAC600; 
   margin-top: 10px;
 }
 
