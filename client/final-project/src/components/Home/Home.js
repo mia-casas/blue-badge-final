@@ -3,6 +3,7 @@ import {Container} from 'reactstrap';
 import ListCreate from './List/ListSetup';
 import ListMap from './List/ListMap';
 import ListEdit from './List/ListEdit'
+import APIURL from '../../helpers/environment'
 
 const HomePage = (props) => {
     const [lists, setLists] = useState([]);
@@ -10,7 +11,7 @@ const HomePage = (props) => {
     const [listToUpdate, setListToUpdate] = useState({});
 
     const fetchLists = () => {
-        fetch('http://localhost:5005/list/view', {
+        fetch(`${APIURL}/list/view`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Button, Input, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import APIURL from '../../../helpers/environment'
 
 const ListEdit = (props) => {
     const [editItem, setEditItem] = useState(props.listToUpdate.item);
@@ -8,7 +9,7 @@ const ListEdit = (props) => {
 
     const listUpdate = (event, list) => {
         event.preventDefault();
-        fetch(`http://localhost:5005/list/update/${props.listToUpdate.id}`, {
+        fetch(`${APIURL}/list/update/${props.listToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({list: {item:editItem, quantity:editQty, category:editCat}}),
             headers: new Headers({

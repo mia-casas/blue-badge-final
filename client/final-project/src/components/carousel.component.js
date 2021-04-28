@@ -17,9 +17,6 @@ export default function RecipeCarousel() {
 
                 <div>
 
-                    <img src={item1}/>
-                    <h2>Item 1</h2>
-
                     <img className="slides" alt="" src={item1}/>
                     <h4>Item 1</h4>
                     <h4 id ="disappear">.</h4>

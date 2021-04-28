@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ const Login = (props) => {
             alert("Please enter a password between 5 and 16 characters")
 
         } else 
-        fetch(`http://localhost:5005/user/login`, {
+        fetch(`${APIURL}/user/login`, {
             method: "POST",
             body: JSON.stringify({user:{email: email, password: password}}),
             headers: new Headers({

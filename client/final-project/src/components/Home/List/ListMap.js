@@ -1,10 +1,10 @@
 import React from 'react';
 import {Table, Row, Button, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
-
+import APIURL from '../../../helpers/environment'
 
 const ListMap = (props) => {
     const deleteList = (list) =>{
-        fetch(`http://localhost:5005/list/delete/${list.id}`, {
+        fetch(`${APIURL}/list/delete/${list.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
