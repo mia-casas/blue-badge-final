@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { Col, Row } from 'reactstrap'
-// Import content sections
 import Auth from './components/Auth/Auth'
 import RecipeCarousel from './components/carousel.component';
 import HomePage from './components/Home/Home';
