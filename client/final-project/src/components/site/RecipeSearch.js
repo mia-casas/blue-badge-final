@@ -61,6 +61,7 @@ const onSubmitForm = (event) => {
   const recipeList2 = recipe2.map((recipe2) => <li>{recipe2}</li>);
   const recipeList3 = recipe3.map((recipe3) => <li>{recipe3}</li>);
 
+
 // ***** RETURN ********
 
   return (
@@ -100,14 +101,17 @@ const onSubmitForm = (event) => {
         <Col>
           {title1}
           <ul>{recipeList1}</ul>
+          <Button>Save Recipe</Button>
         </Col>
         <Col>
           {title2}
           <ul>{recipeList2}</ul>
+          <Button>Save Recipe</Button>
         </Col>
         <Col>
           {title3}
           <ul>{recipeList3}</ul>
+          <Button>Save Recipe</Button>
         </Col>
       </Row>
     </div>
